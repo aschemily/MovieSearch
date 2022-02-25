@@ -8,14 +8,14 @@
 import Foundation
 
 struct Movies: Decodable{
-    var movie: [Movie]
+    var results: [Movie]
 }
 
 struct Movie: Decodable{
     let title: String
     let description: String
     let rating: Double
-    let image: String
+    let image: String?
     enum CodingKeys: String, CodingKey{
         case title = "original_title"
         case description = "overview"

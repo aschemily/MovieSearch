@@ -10,7 +10,8 @@ import UIKit
 class MovieTableViewController: UITableViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
-    var movies: [String] = []
+   
+    var movies: [Movie] = []
    
    
     override func viewDidLoad() {
@@ -36,13 +37,17 @@ class MovieTableViewController: UITableViewController {
         cell.movie = movie
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
+    }
 
 }//end of tableview controller
 
 extension MovieTableViewController: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchMovie = searchBar.text, !searchMovie.isEmpty else {return}
-        
+      //  print("🎥movie searched is\(searchMovie)")
         MovieController.fetchMovies(movieSearched: searchMovie) { result in
             DispatchQueue.main.async {
                 switch result{
@@ -51,7 +56,7 @@ extension MovieTableViewController: UISearchBarDelegate{
                     self.movies = movies
                     self.tableView.reloadData()
                 case .failure(let error):
-                    print("🔴error in \(#function), \(error.localizedDescription)🔴")
+                    print("🔴error in \(#function), \(error.localizedDescription), \(error)🔴")
                 }
             }
         }
