@@ -15,6 +15,8 @@
 		3241876127C85E3300609DE4 /* MovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3241876027C85E3300609DE4 /* MovieController.swift */; };
 		3241876327C8643800609DE4 /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3241876227C8643800609DE4 /* MovieTableViewController.swift */; };
 		3241876527C8645200609DE4 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3241876427C8645200609DE4 /* MovieTableViewCell.swift */; };
+		3241876727C8649F00609DE4 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3241876627C8649F00609DE4 /* Movie.swift */; };
+		3241876A27C871D900609DE4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3241876927C871D900609DE4 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		3241876027C85E3300609DE4 /* MovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieController.swift; sourceTree = "<group>"; };
 		3241876227C8643800609DE4 /* MovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
 		3241876427C8645200609DE4 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		3241876627C8649F00609DE4 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		3241876927C871D900609DE4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 				3241875C27C85D5200609DE4 /* Controllers */,
 				3241875A27C85D3200609DE4 /* Resources */,
 				3241875B27C85D3E00609DE4 /* Views */,
+				3241876827C871BD00609DE4 /* Error+Extensions */,
 			);
 			path = MovieSearch;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 		3241875D27C85D5900609DE4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3241876627C8649F00609DE4 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -119,6 +125,14 @@
 				3241876027C85E3300609DE4 /* MovieController.swift */,
 			);
 			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		3241876827C871BD00609DE4 /* Error+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3241876927C871D900609DE4 /* NetworkError.swift */,
+			);
+			path = "Error+Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +207,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3241876527C8645200609DE4 /* MovieTableViewCell.swift in Sources */,
+				3241876A27C871D900609DE4 /* NetworkError.swift in Sources */,
 				3241876327C8643800609DE4 /* MovieTableViewController.swift in Sources */,
+				3241876727C8649F00609DE4 /* Movie.swift in Sources */,
 				3241876127C85E3300609DE4 /* MovieController.swift in Sources */,
 				3241874727C85D2400609DE4 /* AppDelegate.swift in Sources */,
 				3241874927C85D2400609DE4 /* SceneDelegate.swift in Sources */,
@@ -346,7 +362,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MovieSearch/Info.plist;
+				INFOPLIST_FILE = MovieSearch/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -373,7 +389,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MovieSearch/Info.plist;
+				INFOPLIST_FILE = MovieSearch/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

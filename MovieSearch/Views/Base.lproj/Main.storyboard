@@ -21,7 +21,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="356" id="vci-7X-H2f" customClass="MovieTableViewCell" customModule="MovieSearch" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="356" id="vci-7X-H2f" customClass="MovieTableViewCell" customModule="MovieSearch" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="88.5" width="414" height="356"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vci-7X-H2f" id="QGP-gS-v2w">
@@ -65,6 +65,12 @@
                                         <constraint firstItem="PeG-dc-zCj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Jqf-sx-Y24" secondAttribute="trailing" constant="8" symbolic="YES" id="ukg-pf-F1c"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="movieDescription" destination="OKs-5t-nw1" id="GVW-JV-bSY"/>
+                                    <outlet property="movieImage" destination="Jqf-sx-Y24" id="poj-Lg-6kY"/>
+                                    <outlet property="movieRating" destination="PeG-dc-zCj" id="aLk-0x-zpz"/>
+                                    <outlet property="movieTitle" destination="QeG-en-iYC" id="NJ7-8Q-ODS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -72,6 +78,9 @@
                             <outlet property="delegate" destination="pyZ-AX-W2t" id="PFC-sH-iaw"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="searchBar" destination="WHX-cf-5fY" id="tR5-Km-jJv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZd-Ls-qAR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
